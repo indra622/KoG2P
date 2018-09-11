@@ -330,7 +330,7 @@ if __name__ == '__main__':
         runTest('rulebook.txt', 'testset.txt')
 
     else:
-        graph = args[0]
+        graph = ' '.join(args[0:])
         runKoG2P(graph, 'rulebook.txt')
 
 
