@@ -1,9 +1,10 @@
 
+if [ -f "*.out" ]; then
+    rm *.out
+fi
 
-rm *.out
 while read line
 do
     string=\'$line\'
-    echo $string
-    python g2p.py $string
+    python g2p.py $string >> $1.out
 done < $1
